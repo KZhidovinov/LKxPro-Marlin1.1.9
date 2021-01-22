@@ -106,7 +106,7 @@
 // @section machine
 #define serial_port1
 	#ifdef serial_port1
-		#define LGT_MAC	
+		// #define LGT_MAC	
 		#ifdef LGT_MAC
 			
         // uncomment or comment LKx_Pro definition to change model
@@ -125,7 +125,7 @@
           #error "Defined mutiple printer model at the same time"
         #endif
 
-				#ifdef LK1_Pro
+				#ifdef LK1_Pro   
 					#define LK1_Pro_AutoBed
 				#else
         #define LK4_Pro_BLTOUCH
@@ -136,6 +136,10 @@
 
 		#endif // LGT_MAC	
 	#endif // serial_port1
+
+#define LK4_Pro
+#define LK4_Pro_BLTOUCH
+
 /**
  * Select the serial port on the board to use for communication with the host.
  * This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -1546,7 +1550,7 @@
 #ifdef LGT_MAC
 	#define SDSUPPORT
 #else
-  //#define SDSUPPORT
+  #define SDSUPPORT
 #endif
 
 /**

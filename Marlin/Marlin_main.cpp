@@ -2577,7 +2577,9 @@ void clean_up_after_endstop_or_probe_move() {
       LCD_MESSAGEPGM(MSG_ERR_PROBING_FAILED);
       SERIAL_ERROR_START();
       SERIAL_ERRORLNPGM(MSG_ERR_PROBING_FAILED);
-	  leveling_sta = 2;  //failed
+      #ifdef LGT_MAC
+	      leveling_sta = 2;  //failed
+      #endif
     }
 
     #if ENABLED(DEBUG_LEVELING_FEATURE)
