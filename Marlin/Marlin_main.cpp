@@ -15272,7 +15272,7 @@ void idle(
     }
   #endif
 #ifdef LGT_MAC
-	DWIN_MAIN_FUNCTIONS();
+	// DWIN_MAIN_FUNCTIONS();
 #endif // LGT_MAC
 }
 
@@ -15623,7 +15623,7 @@ void setup() {
  */
 void loop() {
   #ifdef LGT_MAC
-	LGT_LCD_startup_settings();
+	// LGT_LCD_startup_settings();
   #endif // LGT_MAC
   #if ENABLED(SDSUPPORT)
     card.checkautostart();

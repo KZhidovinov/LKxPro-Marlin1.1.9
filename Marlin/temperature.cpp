@@ -523,7 +523,7 @@ uint8_t Temperature::soft_pwm_amount[HOTENDS];
       }
       lcd_update();
 #ifdef LGT_MAC
-	  DWIN_MAIN_FUNCTIONS();
+	  // DWIN_MAIN_FUNCTIONS();
 #endif // LGT_MAC
     }
     disable_all_heaters();

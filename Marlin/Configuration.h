@@ -106,7 +106,7 @@
 // @section machine
 #define serial_port1
 	#ifdef serial_port1
-		// #define LGT_MAC	
+		#define LGT_MAC	
 		#ifdef LGT_MAC
 			
         // uncomment or comment LKx_Pro definition to change model
@@ -137,8 +137,8 @@
 		#endif // LGT_MAC	
 	#endif // serial_port1
 
-#define LK4_Pro
-#define LK4_Pro_BLTOUCH
+// #define LK4_Pro
+// #define LK4_Pro_BLTOUCH
 
 /**
  * Select the serial port on the board to use for communication with the host.

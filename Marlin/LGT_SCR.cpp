@@ -1286,6 +1286,7 @@ void LGT_SCR::LGT_Analysis_DWIN_Screen_Cmd()
 			LGT_Change_Page(ID_MENU_PRINT_HOME);
 		#endif
 			break;
+		#if ENABLED(POWER_LOSS_RECOVERY)
 		case eBT_HOME_RECOVERY_NO:
 			total_print_time = total_print_time+job_recovery_info.print_job_elapsed/60;
 			eeprom_write_dword((uint32_t*)EEPROM_INDEX, total_print_time);
@@ -1302,6 +1303,7 @@ void LGT_SCR::LGT_Analysis_DWIN_Screen_Cmd()
 				LGT_Change_Page(ID_MENU_HOME);
 				menu_type = eMENU_HOME;
 			break;
+		#endif
 		case eBT_PRINT_FILE_CLEAN: //Cleaning sel_fileid
 			if (sel_fileid > -1)
 			{
@@ -1852,6 +1854,7 @@ void LGT_SCR::LGT_Printer_Light_Update()
 }
 
 void LGT_SCR::LGT_Power_Loss_Recovery_Resume() {
+	#if ENABLED(POWER_LOSS_RECOVERY)
 	char cmd[30];
 	// Restore all hotend temperatures
 	sprintf_P(cmd, PSTR("M190 S%i"), job_recovery_info.target_temperature_bed);
@@ -1876,6 +1879,7 @@ void LGT_SCR::LGT_Power_Loss_Recovery_Resume() {
 	recovery_time = job_recovery_info.print_job_elapsed;
 	recovery_percent = job_recovery_info.have_percentdone;
 	recovery_z_height = job_recovery_info.save_current_Z;
+	#endif
 }
 
 /*************************************
