@@ -128,7 +128,7 @@
 				#ifdef LK1_Pro
 					#define LK1_Pro_AutoBed
 				#else
-        // #define LK4_Pro_BLTOUCH
+          #define LK4_Pro_BLTOUCH
         #ifdef LK5_Pro
           #define LK4_Pro
         #endif
@@ -842,9 +842,9 @@
 	#define Y_PROBE_OFFSET_FROM_EXTRUDER -3//0 // Y offset: -front +behind [the nozzle]
 	#define Z_PROBE_OFFSET_FROM_EXTRUDER 0 //0  // Z offset: -below +above  [the nozzle]
 #elif ENABLED(LK4_Pro_BLTOUCH) 
-	#define X_PROBE_OFFSET_FROM_EXTRUDER -36 // X offset: -left  +right  [of the nozzle]
-	#define Y_PROBE_OFFSET_FROM_EXTRUDER -4 // Y offset: -front +behind [the nozzle]
-	#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.4 // Z offset: -below +above  [the nozzle]
+	#define X_PROBE_OFFSET_FROM_EXTRUDER -34 // X offset: -left  +right  [of the nozzle]
+	#define Y_PROBE_OFFSET_FROM_EXTRUDER -6 // Y offset: -front +behind [the nozzle]
+	#define Z_PROBE_OFFSET_FROM_EXTRUDER 0 // Z offset: -below +above  [the nozzle]
 #endif // LK1_Pro_AutoBed
 
 // Certain types of probes need to stay away from edges
@@ -862,7 +862,7 @@
 // The number of probes to perform at each point.
 //   Set to 2 for a fast/slow probe, using the second probe result.
 //   Set to 3 or more for slow probes, averaging the results.
-//#define MULTIPLE_PROBING 2
+#define MULTIPLE_PROBING 2
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1127,10 +1127,10 @@
 	#define BACK_PROBE_BED_POSITION  247
 #endif
 #ifdef LK4_Pro_BLTOUCH
-	#define LEFT_PROBE_BED_POSITION  50
-	#define RIGHT_PROBE_BED_POSITION 170
-	#define FRONT_PROBE_BED_POSITION 50
-	#define BACK_PROBE_BED_POSITION  170
+	#define LEFT_PROBE_BED_POSITION  15
+	#define RIGHT_PROBE_BED_POSITION 181
+	#define FRONT_PROBE_BED_POSITION 15
+	#define BACK_PROBE_BED_POSITION  209
 #endif // LK4_Pro_BLTOUCH
 
   // Probe along the Y axis, advancing X after each column
