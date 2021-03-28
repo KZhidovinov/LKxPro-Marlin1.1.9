@@ -89,7 +89,7 @@
 #define Y_MAX_PIN          15
 
 #ifdef LGT_MAC
-	#define SD_DETECT_PIN   49
+	// #define SD_DETECT_PIN   49
 	#ifndef FIL_RUNOUT_PIN
 		#define FIL_RUNOUT_PIN  2
 	#endif
